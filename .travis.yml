@@ -1,0 +1,8 @@
+language: c
+addons:
+  homebrew:
+    brewfile: true
+os:
+  - linux
+  - osx
+script: libtoolize -ci && autoreconf -vfi && ./configure CFLAGS="-I/usr/local/include" LDFLAGS="-L/usr/local/lib" && make
